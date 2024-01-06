@@ -93,6 +93,22 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'url' => env('DATABASE_URL', 'mongodb+srv://Dan:Dansongs15@cluster0.luakpvi.mongodb.net/?retryWrites=true&w=majority'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'dsn' => env('DB_URL', 'mongodb+srv://Dan:Dansongs15@cluster0.luakpvi.mongodb.net/?retryWrites=true&w=majority'),
+            'port' => env('DB_PORT', '27017'),
+            'database' => env('DB_DATABASE', 'Cluster0'),
+            'username' => env('DB_USERNAME', 'Dan'),
+            'password' => env('DB_PASSWORD', 'Dansongs15'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'search_path' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
     ],
 
     /*
