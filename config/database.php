@@ -95,9 +95,9 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'url' => env('DATABASE_URL', 'mongodb+srv://Dan:Dansongs15@cluster0.luakpvi.mongodb.net/?retryWrites=true&w=majority'),
+            'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
-            'dsn' => env('DB_URL', 'mongodb+srv://Dan:Dansongs15@cluster0.luakpvi.mongodb.net/?retryWrites=true&w=majority'),
+            'dsn' => env('DB_URL'),
             'port' => env('DB_PORT', '27017'),
             'database' => env('DB_DATABASE', 'Cluster0'),
             'username' => env('DB_USERNAME', 'Dan'),
