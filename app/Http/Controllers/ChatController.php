@@ -3,12 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Service\ChatGPTService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
 
 class ChatController extends Controller
 {
+    private function successMessage($msg, $data = [], $status_code = 200): JsonResponse
+    {
+        return response()->json([
+            'status' => "success",
+            'data' => $data,
+            'message' => $msg
+        ], $status_code);
+    }
+
+    private function errorMessage($msg, $data = [], $status_code = 400): JsonResponse
+    {
+        return response()->json([
+            'status' => "error",
+            'data' => $data,
+            'message' => $msg
+        ], $status_code);
+    }
 
     public function results($response)
     {
@@ -34,7 +52,7 @@ class ChatController extends Controller
 
             // dd(['response' => $response]);
 
-            return $response;
+            return $this->successMessage("Result", $response, 200);
 
             // return redirect()->route("article.result", $response);
         } catch(\Exception $err){
