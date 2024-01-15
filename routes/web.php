@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/article/post', [ChatController::class, 'createArticle'])->name('create.Article');
+// Route::post('/article/post', [ChatController::class, 'createArticle'])->name('create.Article');
 
-Route::get('/result', [ChatController::class, 'results'])->name("article.result");
+// Route::get('/result', [ChatController::class, 'results'])->name("article.result");
 
 
